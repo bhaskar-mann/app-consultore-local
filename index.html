@@ -33,13 +33,15 @@
         const unique_id = document.getElementById('avaluo').value
 
         const cred = {
-                    username: 'eoyel@gmailvn.net',
+          username: 'eoyel@gmailvn.net',
           password: 'Mann1234',
           unique_id: unique_id,
           ip: 'test',
           userId: 'test',
           redirectUrl: 'https://bhaskar-mann.github.io/app-consultore-local/',
-          application: 'test'
+          application: 'test',
+          clientId: '332ub10oh93sueasg3e6l273ss',
+          secret: '1vdsjcdcgvlngn4u7ck6r3h4aa959d3ael5r75sgp07ktf0ub1i0'
         }
 
         const credSecret = 'secret-cred'
@@ -59,8 +61,9 @@
         )
 
         // const redirect_uri = `http://localhost:4200/#/silent-login?user=${cred.username}&pass=${cred.password}&uid=${cred.unique_id}`
-        const redirect_uri = `http://localhost:4200/silent-login?user=${cred.username}&pass=${cred.password}&uid=${cred.unique_id}&ip=${cred.ip}&userId=${cred.userId}&redirectUrl=${cred.redirectUrl}&application=${cred.application}`
-
+//         const redirect_uri = `http://localhost:4200/silent-login?user=${cred.username}&pass=${cred.password}&uid=${cred.unique_id}&ip=${cred.ip}&userId=${cred.userId}&redirectUrl=${cred.redirectUrl}&application=${cred.application}`
+        const redirect_uri = `http://localhost:4200/silent-login?clientid=${cred.clientId}&secret=${cred.secret}&uid=${cred.unique_id}&ip=${cred.ip}&userId=${cred.userId}&redirectUrl=${cred.redirectUrl}&application=${cred.application}`
+        
         console.log('avaluo: ', unique_id)
 
         console.log('raw json :', cred)
